@@ -1,6 +1,6 @@
 # Game Design Interview — Progress Notes
 
-> **Status:** In progress. Completed Categories 1–5. Resume at **Category 6: Farming & Life Sim**.
+> **Status:** In progress. Completed Categories 1–7. Resume at **Category 8: Progression Systems**.
 
 ---
 
@@ -118,11 +118,74 @@
 
 ---
 
+## Category 6: Farming & Life Sim ✓
+
+**Seasons:** Seasons affect what can be grown. Magic-based manipulation will exist but implementation is TBD. Leading options: greenhouse/enchanted plot, seed imbuing (elemental mana at a cost), or seasonal extension (soft delay, not full override).
+
+**Soil Management:** Tilling, watering, fertilizer, harvesting. No crop rotation — too tedious. Fertilizer primarily affects growth speed. Crop quality as a mechanic is deferred — may revisit if economy needs more texture.
+
+**Animals / Sprites:**
+- Magical sprites rather than traditional farm animals, tied directly to mana seed restoration
+- Each mana seed freed releases an elemental sprite (stone, water, fire, etc.)
+- Sprites are assigned to roles/buildings in the sprite city and can be managed by the player
+- Sprite combinations produce advanced materials (e.g. fire + stone = bricks for higher-tier buildings)
+- Combination mechanics need further workshopping
+
+**Sprite City:**
+- A physical space the player walks through, outside the main day cycle
+- Visited in the morning before the day begins
+- Grows visually as the player invests materials into it
+- Buildings provide passive bonuses (mining speed, move speed, money earned, etc.)
+- No hard locks — all buildings eventually buildable, but investment order shapes the experience
+- Punishment for passing out away from farm: player misses their sprite city visit that day
+
+**Dual Shipping Bin System:**
+- First rescued sprite adds a second shipping bin to the farm
+- Bin 1 → town (sells for coin)
+- Bin 2 → sprite city (supplies upgrade materials)
+- Creates a daily resource allocation decision: money vs. progression
+
+**Farm Layout:**
+- Fully free customization based on recipes the player has unlocked
+- Expansion comes from clearing space in the world, not upgrading specific plots
+- Player house is the one exception — it has tiered upgrades
+
+**Technical Note:** Design an `Upgradeable` base class/interface now so the player house upgrade system can be reused for other world objects (shrines, outposts, sprite buildings, etc.) without retrofitting later.
+
+---
+
+## Category 7: NPC & Social Systems ✓
+
+**NPC Count:** 10+ already have rough character profiles. Full roster likely 20+. Population grows as the town revitalizes — new characters migrate back as areas unlock.
+
+**Relationship Depth:** All of the above — friendship meters, full story arcs, romance, marriage.
+
+**Schedules & Routines:** NPCs have daily schedules so players (and wikis) can reliably find them. Routines change as the town revitalizes and new areas/activities become available.
+
+**Relationship Building:**
+- Gifts (daily)
+- Dialogue (daily chat, small incremental gain)
+- Quests (handcrafted story beats — written by the developer, not procedural)
+- Shared activities / dates
+- Equipment with friendship modifiers considered and deferred — added complexity not worth the payoff
+
+**Marriage:** Planned.
+
+**Polyamory:**
+- Being explored — genuinely novel for the genre
+- Poly is a character trait assigned per NPC, not a universal option
+- Poly NPCs may have compatibility preferences among each other — polycule combinations emerge naturally from individual traits
+- NPCs can have their own poly relationships independent of the player
+- No hard cap on simultaneous partners — natural relationship tendencies act as the organic limit
+- Concern: complexity vs. character count. To be revisited once the full NPC roster is defined.
+
+**NPC Quests:** Fully handcrafted story beats, written by the developer. Procedural generation explicitly ruled out — emotional weight requires authored content.
+
+---
+
 ## Categories Remaining
 
-- [ ] Category 6: Farming & Life Sim  ← **Resume here**
-- [ ] Category 7: NPC & Social Systems
-- [ ] Category 8: Progression Systems
+- [ ] Category 8: Progression Systems  ← **Resume here**
 - [ ] Category 9: Economy
 - [ ] Category 10: UI & UX
 - [ ] Category 11: Art Direction
