@@ -1,6 +1,6 @@
 # Game Design Interview — Progress Notes
 
-> **Status:** In progress. Completed Categories 1–7. Resume at **Category 8: Progression Systems**.
+> **Status:** In progress. Completed Categories 1–10. Resume at **Category 11: Art Direction**.
 
 ---
 
@@ -183,12 +183,104 @@
 
 ---
 
+## Category 8: Progression Systems ✓
+
+**Leveling & XP:** Activity-based XP exclusively. No traditional global level — each skill (farming, combat, fishing, catching, etc.) tracks independently.
+
+**Visible Progression:** Skill levels are visible to the player via progress bars. Players can see exactly where they stand and where to focus effort to optimize improvements.
+
+**Unlocks:** Leveling a skill unlocks a mix of:
+- New actions and capabilities
+- Improved efficiency (faster harvesting, stronger attacks, etc.)
+- New recipes
+- Dialogue options (maybe — not ruled out yet)
+
+**Skill Caps:** Players can eventually max everything in a single playthrough. Maxing all skills is not required to complete the game but is attainable for dedicated players.
+
+**Talent Trees:** Permanent specialization choices via a talent tree system. However, changes are not free — the player can reverse specializations only through a specific quest or purchasable item. This prevents random respeccing while maintaining reversibility.
+
+**Gear Progression:**
+- Armor is simple: crafted or found in dungeons. Can be crafted early if the player farms ingredients, or found naturally as dungeon drops later.
+- Accessories / Magic Shards (name TBD): These grant situational abilities and are rotated in/out based on context — elemental resistances, combat bonuses, utility effects, etc.
+
+**Tools & Weapons:** The yo-yo upgrades via mana seeds, just like other tools. Each restored elemental mana seed upgrades all tools/weapons equally.
+
+---
+
+## Category 9: Economy ✓
+
+**Primary Income Sources:**
+- Selling crops
+- Selling foraged items
+- Selling artisan goods (farm items processed by machines)
+- Quest rewards are relationship-focused, not monetary (player preference against money-for-quests as an incentive)
+
+**Machines:** Unlocked via quests or story beats. Once the recipe is known, the player can craft them. Later in the game, machines may become purchasable as an expensive alternative, providing another currency sink and a "convenience vs. efficiency" choice.
+
+**Late-Game Money Sinks:** Multiple sinks to prevent currency irrelevance:
+- Town upgrades (structures, utilities)
+- Map navigation shortcuts (inspired by Stardew's endgame shortcuts)
+- New town areas for NPCs to visit (without introducing new mechanics — similar to Stardew's community center rebuild)
+- Potentially rebuilding structures in reopened areas (e.g., delivering dairy goods to reopen a cheese shop)
+- Purchasing machines as a convenience over crafting
+
+**Dual Shipping Bin Balance:** The tension will eventually flatten as the sprite city will require increasingly expensive advanced artisan goods that take longer to produce. At that point, the coin bin becomes less critical. This is accepted as inevitable — the goal is to keep the decision meaningful as long as possible through varied rewards and upgrade paths.
+
+**Shop Inventories:** Expand as the town grows and include seasonal rotation for seeds and farm goods.
+
+**Crafting Economy:** Strong yes. Cooking and brewing provide stat boosts (stamina/HP recovery). Smithing is used to craft equipment and for sprite city building materials. Textiles can be used for cosmetics (ambitious but desired).
+
+**NPC Trading:** Player-to-NPC trading exists only within quests as story-driven exchanges. All other economic transactions occur through shops and shipping bins.
+
+**Economy Longevity:** The economy will eventually break in endgame (acknowledged and unavoidable). Strategy to extend balance as long as possible:
+- Keep ingredients useful for crafting and artisan goods
+- Route goods into sprite city upgrades
+- Use crops/materials for town rebuilding projects
+- Tie currency to progression gates rather than letting one crop dominate
+
+---
+
+## Category 10: UI & UX ✓
+
+**Input Priority:** Keyboard/mouse and gamepad receive equal priority. KB/M is a hard requirement for PC; gamepad is the developer's personal preference and will receive equal polish.
+
+**Radial Menu:** Opened via shoulder buttons on gamepad (exact button TBD via playtesting) or spacebar on KB/M. Will playtest on PC to determine what feels right.
+
+**HUD Elements:** Minimal to avoid clutter. Shows:
+- Time of day
+- Day of month
+- HP, MP, Stamina
+- Crop status is visually indicated by the crop itself — no HUD tracking unless a quest specifically requires a quantity, in which case the tracker appears only for the currently active quest
+
+**Relationship Indicators:** Not on HUD. Tracked in the menu/codex system.
+
+**Menu & Codex Features:**
+- Working inventory
+- Town map
+- NPC relationships tracker
+- Quests tracker
+- Collectibles tracker
+- **Lore tracking:** Deferred. Too much maintenance for uncertain value; wikis will handle this if the game succeeds
+
+**Map System:** 
+- Minimap in-game
+- Full map accessible in menu/codex
+- Map revealed as new areas are unlocked and explored
+
+**Accessibility:**
+- No difficulty scaling (static, as decided in Category 5)
+- "No Death Mode" for players who want to enjoy narrative and cozy aspects without combat penalty
+- Colorblind modes
+- Input remapping
+- Text scaling
+
+**Save System:** Autosave at end of day only. The cozy farming sim genre doesn't lend itself to intraday saving — this fits the design philosophy.
+
+---
+
 ## Categories Remaining
 
-- [ ] Category 8: Progression Systems  ← **Resume here**
-- [ ] Category 9: Economy
-- [ ] Category 10: UI & UX
-- [ ] Category 11: Art Direction
+- [ ] Category 11: Art Direction  ← **Resume here**
 - [ ] Category 12: Audio Direction
 - [ ] Category 13: Multiplayer & Co-op
 - [ ] Category 14: Technical Scope
