@@ -278,6 +278,23 @@
 
 ---
 
+---
+
+## Open Design Questions (Awaiting Further Discussion/Playtesting)
+
+**Seasons & Outdoor Growing:**
+- Seasonal extension: **Ruled out** (breaks holiday/birthday pacing)
+- Greenhouse: Liked, but exploring alternative form factors that fit the world better
+- Seed imbuing: Deferred for future discussion
+
+**Day/Night & Dungeons:**
+- Interaction model (time stops/slows/continuous) needs playtesting to determine feel
+
+**Sprite Combinations:**
+- Mechanics need workshopping. Some questions can be thought through now; others require playtesting feedback
+
+---
+
 ## Categories Remaining
 
 - [ ] Category 11: Art Direction  ← **Resume here**
