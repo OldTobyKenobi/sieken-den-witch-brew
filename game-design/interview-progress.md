@@ -1,6 +1,6 @@
 # Game Design Interview — Progress Notes
 
-> **Status:** In progress. Completed Categories 1–10. Resume at **Category 11: Art Direction**.
+> **Status:** In progress. Completed Categories 1–12. Resume at **Category 13: Multiplayer & Co-op**.
 
 ---
 
@@ -262,7 +262,7 @@
 - Collectibles tracker
 - **Lore tracking:** Deferred. Too much maintenance for uncertain value; wikis will handle this if the game succeeds
 
-**Map System:** 
+**Map System:**
 - Minimap in-game
 - Full map accessible in menu/codex
 - Map revealed as new areas are unlocked and explored
@@ -277,6 +277,41 @@
 **Save System:** Autosave at end of day only. The cozy farming sim genre doesn't lend itself to intraday saving — this fits the design philosophy.
 
 ---
+
+## Category 11: Art Direction ✓
+
+**Resolution:** Likely 32x32 — enough room for readable faces, distinct outfits, and personality without ballooning asset costs. Not yet locked in; visual testing recommended early in development before committing.
+
+**Color Palette:** Saturated and vibrant. Consistent with the whimsical high fantasy tone and helps biomes/enemies feel visually distinct.
+
+**Visual References:** Secret of Mana, Stardew Valley, Dragon Quest (Toriyama character design), Chrono Trigger (environmental richness), HD-2D aesthetic (Adventures of Elliot / Octopath Traveler — depth of field and modern lighting).
+
+**Character Presentation:** Larger, expressive sprites in the style of Chrono Trigger — not small overworld sprites with separate portrait art. Characters need room to emote given the relationship depth planned.
+
+**Enemies:** Mostly creatures, with a mix of other types. Designs should feel native to each biome/region.
+
+---
+
+## Category 12: Audio Direction ✓
+
+**Genre / Style:** Chiptune as the foundation — SNES-style (SPC700 sound chip) with a modern hybrid production sensibility. Not pure retro chiptune; more chiptune-as-lead-instrument in a contemporary context.
+
+**Reference Composers / Artists:**
+- Nobuo Uematsu (Final Fantasy) — emotional weight from simple waveforms
+- I Fight Dragons — direct blueprint: chiptune as lead instrument in modern rock/electronic production
+- Gorillaz (192000) — genre-blending without apology, dreamy electronic texture
+- Jeezy (My Hood) — hip-hop rhythmic punch
+- Bubba Graham (Thunder) — playful melodic piano over hip-hop beats
+
+**Throughline:** Chiptune/electronic foundation with strong rhythmic drive and melodic personality on top. Should stand apart from typical orchestral or pure chiptune indie RPG scores.
+
+**Music Transitions:** Scene-based rather than state-based. Each area has its own distinct track. Combat music may not be a separate layer — if area music has enough rhythmic energy, combat can live inside it organically without a jarring switch. Goal is immersion over convention.
+
+**Sound Effects:** All sound is important. Two distinct roles:
+- **Ambient world sounds** — critical for immersion; the world should feel alive passively
+- **Action sounds** (doors, crop harvesting, weapon impacts, etc.) — critical for timing and rhythm feedback; players learn task cadence through audio cues
+
+**Note:** No AI-generated audio. All music and SFX will be human-created assets.
 
 ---
 
@@ -293,12 +328,16 @@
 **Sprite Combinations:**
 - Mechanics need workshopping. Some questions can be thought through now; others require playtesting feedback
 
+**HD-2D Rendering (revisit in Category 14 — Technical Scope):**
+- Developer is drawn to HD-2D depth of field and modern lighting effects
+- True HD-2D in Godot 4 requires 3D rendering pipeline with `Sprite3D` nodes, which has meaningful implications: normal maps needed per sprite sheet (large art asset multiplier), heavier performance overhead, loss of some 2D tooling conveniences
+- Lighter alternative: stay in 2D pipeline and simulate depth/lighting via parallax layers and post-processing shaders (~70% of the look at ~20% of the complexity)
+- **Must decide before any assets are produced** — affects entire rendering architecture
+
 ---
 
 ## Categories Remaining
 
-- [ ] Category 11: Art Direction  ← **Resume here**
-- [ ] Category 12: Audio Direction
-- [ ] Category 13: Multiplayer & Co-op
+- [ ] Category 13: Multiplayer & Co-op  ← **Resume here**
 - [ ] Category 14: Technical Scope
 - [ ] Category 15: Platform & Controls
